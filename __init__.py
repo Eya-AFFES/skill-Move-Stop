@@ -31,34 +31,29 @@ class MoveStopSkill(MycroftSkill):
         super(MoveStopSkill, self).__init__(name="MoveStopSkill")
 
     def initialize(self):
-        thank_you_intent = IntentBuilder("ThankYouIntent"). \
-            require("ThankYouKeyword").build()
+        thank_you_intent = IntentBuilder("ThankYouIntent").require("ThankYouKeyword").build()
         self.register_intent(thank_you_intent, self.handle_thank_you_intent)
 
-        how_are_you_intent = IntentBuilder("HowAreYouIntent"). \
-            require("HowAreYouKeyword").build()
-        self.register_intent(how_are_you_intent,
-                             self.handle_how_are_you_intent)
+        how_are_you_intent = IntentBuilder("HowAreYouIntent").require("HowAreYouKeyword").build()
+        self.register_intent(how_are_you_intent,self.handle_how_are_you_intent)
 
-        hello_world_intent = IntentBuilder("HelloWorldIntent"). \
-            require("HelloWorldKeyword").build()
-        self.register_intent(hello_world_intent,
-                             self.handle_hello_world_intent)
+        hello_world_intent = IntentBuilder("HelloWorldIntent").require("HelloWorldKeyword").build()
+        self.register_intent(hello_world_intent ,self.handle_hello_world_intent)
 
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
         msg="ST"
-        ser00.write(bytes(msg, 'utf-8')) 
+        ser00.write(bytes(msg, 'utf-8')\n) 
 
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
         msg="MVB"
-        ser00.write(bytes(msg, 'utf-8')) 
+        ser00.write(bytes(msg, 'utf-8')\n) 
 
     def handle_hello_world_intent(self, message):
         self.speak_dialog("hello.world")
         msg="MVF"
-        ser00.write(bytes(msg, 'utf-8')) 
+        ser00.write(bytes(msg, 'utf-8')\n) 
 
     def stop(self):
         pass
