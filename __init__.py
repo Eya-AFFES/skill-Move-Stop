@@ -15,19 +15,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Mycroft Core.  If not, see <http://www.gnu.org/licenses/>.
 
-from adapt.intent import IntentBuilder
+__author__ = 'Eya-AFFES'
 
+from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
 
-__author__ = 'eward'
+import serial
+ser00 = serial.Serial ("/dev/ttyS0", 9600)    #Open port with baud rate
 
 LOGGER = getLogger(__name__)
 
-
-class HelloWorldSkill(MycroftSkill):
+class MoveStopSkill(MycroftSkill):
     def __init__(self):
-        super(HelloWorldSkill, self).__init__(name="HelloWorldSkill")
+        super(MoveStopSkill, self).__init__(name="MoveStopSkill")
 
     def initialize(self):
         thank_you_intent = IntentBuilder("ThankYouIntent"). \
@@ -46,16 +47,22 @@ class HelloWorldSkill(MycroftSkill):
 
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
+        msg="ST"
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
+        msg="MVB"
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def handle_hello_world_intent(self, message):
         self.speak_dialog("hello.world")
+        msg="MVF"
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def stop(self):
         pass
 
 
 def create_skill():
-    return HelloWorldSkill()
+    return MoveStopSkill()
