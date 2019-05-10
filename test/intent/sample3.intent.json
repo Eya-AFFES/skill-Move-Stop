@@ -1,7 +1,7 @@
 {
-  "utterance": "Hello world",
+  "utterance": "Move forward",
   "intent_type": "HelloWorldIntent",
   "intent": {
-    "HelloWorldKeyword": "hello world"
+    "HelloWorldKeyword": "move forward"
   }
 }
