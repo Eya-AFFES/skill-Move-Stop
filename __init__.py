@@ -43,17 +43,17 @@ class MoveStopSkill(MycroftSkill):
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
         msg="ST"
-        ser00.write(bytes(msg, 'utf-8')\n) 
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
         msg="MVB"
-        ser00.write(bytes(msg, 'utf-8')\n) 
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def handle_hello_world_intent(self, message):
         self.speak_dialog("hello.world")
         msg="MVF"
-        ser00.write(bytes(msg, 'utf-8')\n) 
+        ser00.write(bytes(msg, 'utf-8')) 
 
     def stop(self):
         pass
