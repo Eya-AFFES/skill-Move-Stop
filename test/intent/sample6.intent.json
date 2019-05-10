@@ -1,7 +1,7 @@
 {
-  "utterance": "How has your day been",
+  "utterance": "Go backward",
   "intent_type": "HowAreYouIntent",
   "intent": {
-    "HowAreYouKeyword": "how has your day been"
+    "HowAreYouKeyword": "go backward"
   }
 }
