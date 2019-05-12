@@ -18,9 +18,12 @@
 __author__ = 'Eya-AFFES'
 
 from adapt.intent import IntentBuilder
+#Import the IntentBuilder class from Adapt. 
+#Adapt is an Intent-handling engine. Its job is to understand what a user Speaks to Mycroft, 
+#and to pass that information to a Skill for handling.
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
-#Importing the required libraries. These libraries will be required on every Skill
+#Importing the required libraries. These 3 libraries will be required on every Skill
 
 import serial
 ser00 = serial.Serial ("/dev/ttyS0", 9600)    #Open port with baud rate
