@@ -35,7 +35,7 @@ class MoveStopSkill(MycroftSkill):
         super(MoveStopSkill, self).__init__(name="MoveStopSkill")
         
     def initialize(self):
-        #initialize()function defines each of the Intents of the Skill. Note that there are three Intents defined in
+        #initialize()function defines each of the Intents of the Skill. Note that there are three Intents defined
         
         #three Intents defined in vocab files
         thank_you_intent = IntentBuilder("ThankYouIntent").require("ThankYouKeyword").build()
