@@ -1,7 +1,0 @@
-{
-  "utterance": "Go ahead",
-  "intent_type": "HelloWorldIntent",
-  "intent": {
-    "HelloWorldKeyword": "go ahead"
-  }
-}

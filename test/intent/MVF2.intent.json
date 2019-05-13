@@ -1,0 +1,7 @@
+{
+  "utterance": "Go ahead",
+  "intent_type": "MVFIntent",
+  "intent": {
+    "MVFKeyword": "go ahead"
+  }
+}
