@@ -41,8 +41,8 @@ class MoveStopSkill(MycroftSkill):
         #initialize()function defines each of the Intents of the Skill. Note that there are three Intents defined
         
         #three Intents defined in vocab files
-        Stop_intent = IntentBuilder("StopIntent").require("StopKeyword").build()
-        self.register_intent(Stop_intent, self.handle_Stop_intent)
+        ST_intent = IntentBuilder("STIntent").require("STKeyword").build()
+        self.register_intent(ST_intent, self.handle_ST_intent)
 
         MVB_intent = IntentBuilder("MVBIntent").require("MVBKeyword").build()
         self.register_intent(MVB_intent,self.handle_MVB_intent)
@@ -67,7 +67,7 @@ class MoveStopSkill(MycroftSkill):
         msg="MVB"
         ser00.write(bytes(msg, 'utf-8'))
         
-    def handle_Stop_intent(self, message):
+    def handle_ST_intent(self, message):
         # A method that handles the Intent Stop_intent
         self.speak_dialog(ST")
         msg="ST"
