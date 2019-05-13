@@ -1,7 +1,0 @@
-{
-  "utterance": "Go backward",
-  "intent_type": "HowAreYouIntent",
-  "intent": {
-    "HowAreYouKeyword": "go backward"
-  }
-}

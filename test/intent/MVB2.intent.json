@@ -1,0 +1,7 @@
+{
+  "utterance": "Go backward",
+  "intent_type": "MVBIntent",
+  "intent": {
+    "MVBKeyword": "go backward"
+  }
+}
