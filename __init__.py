@@ -41,35 +41,35 @@ class MoveStopSkill(MycroftSkill):
         #initialize()function defines each of the Intents of the Skill. Note that there are three Intents defined
         
         #three Intents defined in vocab files
-        thank_you_intent = IntentBuilder("ThankYouIntent").require("ThankYouKeyword").build()
-        self.register_intent(thank_you_intent, self.handle_thank_you_intent)
+        Stop_intent = IntentBuilder("StopIntent").require("StopKeyword").build()
+        self.register_intent(Stop_intent, self.handle_Stop_intent)
 
-        how_are_you_intent = IntentBuilder("HowAreYouIntent").require("HowAreYouKeyword").build()
-        self.register_intent(how_are_you_intent,self.handle_how_are_you_intent)
+        MVB_intent = IntentBuilder("MVBIntent").require("MVBKeyword").build()
+        self.register_intent(MVB_intent,self.handle_MVB_intent)
 
-        hello_world_intent = IntentBuilder("HelloWorldIntent").require("HelloWorldKeyword").build()
-        self.register_intent(hello_world_intent ,self.handle_hello_world_intent)
+        MVF_intent = IntentBuilder("MBFIntent").require("MVFKeyword").build()
+        self.register_intent(MVF_intent ,self.handle_MVF_intent)
 
-    def handle_hello_world_intent(self, message):
+    def handle_MVF_intent(self, message):
         # A method that handles the Intent hello_world_intent
         #2 parameters
         #self is the reference to the object itself
         #message is an incoming message from the messagebus
-        self.speak_dialog("hello.world")
-        #hello.world dialog is passed to the  speak_dialog() method
-        #this is defined in the file “hello.world.dialog”
+        self.speak_dialog("MVF")
+        #MVF dialog is passed to the  speak_dialog() method
+        #this is defined in the file “MVF.dialog”
         msg="MVF"
         ser00.write(bytes(msg, 'utf-8')) 
 
-    def handle_how_are_you_intent(self, message):
-        # A method that handles the Intent how_are_you_intent
-        self.speak_dialog("how.are.you")
+    def handle_MVB_intent(self, message):
+        # A method that handles the Intent MVB_intent
+        self.speak_dialog("MVB")
         msg="MVB"
         ser00.write(bytes(msg, 'utf-8'))
         
-    def handle_thank_you_intent(self, message):
-        # A method that handles the Intent thank_you_intent
-        self.speak_dialog("welcome")
+    def handle_Stop_intent(self, message):
+        # A method that handles the Intent Stop_intent
+        self.speak_dialog(ST")
         msg="ST"
         ser00.write(bytes(msg, 'utf-8')) 
 
