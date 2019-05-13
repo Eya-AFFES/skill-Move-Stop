@@ -1,0 +1,7 @@
+{
+  "utterance": "Pause",
+  "intent_type": "STIntent",
+  "intent": {
+    "STKeyword": "pause"
+  }
+}

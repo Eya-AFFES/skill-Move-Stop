@@ -1,7 +1,0 @@
-{
-  "utterance": "Pause",
-  "intent_type": "ThankYouIntent",
-  "intent": {
-    "ThankYouKeyword": "pause"
-  }
-}
